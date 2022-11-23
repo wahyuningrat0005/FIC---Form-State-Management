@@ -17,7 +17,7 @@ class LtsmVisibilityView extends StatefulWidget {
         child: Container(
           padding: const EdgeInsets.all(10.0),
           child: Column(
-            children: const [
+            children: [
               /*
               ? Buat variabel visible di dalam State/Controller
               ! bool visible = false;
@@ -37,6 +37,20 @@ class LtsmVisibilityView extends StatefulWidget {
               */
                 
               */
+              if (controller.visible)
+                Container(
+                  width: 100.0,
+                  height: 100.0,
+                  color: Colors.red,
+                ),
+              ElevatedButton.icon(
+                onPressed: (() {
+                  controller.visible = !controller.visible;
+                  controller.setState(() {});
+                }),
+                icon: const Icon(Icons.send),
+                label: const Text("visible"),
+              ),
             ],
           ),
         ),

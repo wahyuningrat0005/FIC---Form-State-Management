@@ -44,7 +44,7 @@ class TrsmRotateAnimationView extends StatefulWidget {
               ),
               AnimatedRotation(
                 // turns: 1.0 * 30,
-                turns: (controller.rotate ? 180 : 0) / 360,
+                turns: (controller.rotate ? 90 : 0) / 360,
                 duration: const Duration(milliseconds: 900),
                 child: Container(
                   height: 100.0,
